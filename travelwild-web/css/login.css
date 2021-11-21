@@ -1,0 +1,20 @@
+body{
+  background: url(../img/travel2.jpg);
+  background-position: top;  
+  background-repeat: no-repeat ;
+  background-size: cover;
+}
+
+.card-panel{
+  margin-top: 15vh;
+  transition: 0.2s !important;
+}
+
+.card-panel{
+  margin-top: 15vh;
+  transition: 0.2s !important;
+}
+
+.link:hover{
+  cursor: pointer;
+}
