@@ -410,29 +410,87 @@ a {
 /**
  * Remove list-style
  */
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, em, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, footer, header, nav, section, main {
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+em,
+img,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+article,
+footer,
+header,
+nav,
+section,
+main {
   margin: 0;
   padding: 0;
   border: 0;
   vertical-align: baseline;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, ul {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul {
   font-size: 1em;
   font-weight: normal;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16, .grid-1-3 {
+.grid-1,
+.grid-2,
+.grid-3,
+.grid-4,
+.grid-5,
+.grid-6,
+.grid-7,
+.grid-8,
+.grid-9,
+.grid-10,
+.grid-11,
+.grid-12,
+.grid-13,
+.grid-14,
+.grid-15,
+.grid-16,
+.grid-1-3 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
@@ -513,7 +571,8 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
   position: relative;
 }
 
-.container:after, .container:before {
+.container:after,
+.container:before {
   content: " ";
   display: table;
 }
@@ -523,7 +582,23 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16, .grid-1-3 {
+  .grid-1,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-5,
+  .grid-6,
+  .grid-7,
+  .grid-8,
+  .grid-9,
+  .grid-10,
+  .grid-11,
+  .grid-12,
+  .grid-13,
+  .grid-14,
+  .grid-15,
+  .grid-16,
+  .grid-1-3 {
     float: left;
     margin-left: 10px;
     margin-right: 10px;
@@ -582,7 +657,8 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
     padding: 0px;
     position: relative;
   }
-  .container:after, .container:before {
+  .container:after,
+  .container:before {
     content: " ";
     display: table;
   }
@@ -598,7 +674,23 @@ h1, h2, h3, h4, h5, h6, p, a, ul {
 }
 
 @media only screen and (max-width: 767px) {
-  .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16, .grid-1-3 {
+  .grid-1,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-5,
+  .grid-6,
+  .grid-7,
+  .grid-8,
+  .grid-9,
+  .grid-10,
+  .grid-11,
+  .grid-12,
+  .grid-13,
+  .grid-14,
+  .grid-15,
+  .grid-16,
+  .grid-1-3 {
     width: 300px;
     margin: 0 0 20px 0;
     float: none;
@@ -614,7 +706,7 @@ body {
 }
 
 p {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 14px;
   line-height: 20px;
 }
@@ -624,11 +716,13 @@ img {
   max-width: 100%;
 }
 
-.formphp label.nao-aparece, .formphp input.nao-aparece {
+.formphp label.nao-aparece,
+.formphp input.nao-aparece {
   display: none !important;
 }
 
-#form-erro span, #form-send span {
+#form-erro span,
+#form-send span {
   margin-bottom: 10px;
   display: block;
   font-size: 18px;
@@ -649,8 +743,8 @@ img {
   color: #fec63e;
   text-transform: uppercase;
   font-weight: bold;
-  letter-spacing: .1em;
-  transition: all .5s ease;
+  letter-spacing: 0.1em;
+  transition: all 0.5s ease;
   font-size: 14px;
   line-height: 20px;
 }
@@ -667,7 +761,7 @@ img {
 
 .subtitulo {
   font-weight: bold;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   color: #000;
   text-transform: uppercase;
   text-align: center;
@@ -687,7 +781,7 @@ img {
 
 .subtitulo-interno {
   font-weight: bold;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   color: #000;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -754,9 +848,9 @@ img {
   color: #000;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   padding: 10px 0;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   font-size: 14px;
   line-height: 20px;
 }
@@ -770,12 +864,14 @@ img {
   }
 }
 
-.header_menu ul li a:hover, .header_menu ul li a.menu_ativo {
+.header_menu ul li a:hover,
+.header_menu ul li a.menu_ativo {
   color: #fff;
 }
 
 @media only screen and (max-width: 767px) {
-  .header_menu ul li a:hover, .header_menu ul li a.menu_ativo {
+  .header_menu ul li a:hover,
+  .header_menu ul li a.menu_ativo {
     border-color: #fff;
   }
 }
@@ -784,7 +880,7 @@ img {
 .introducao {
   width: 100%;
   height: 380px;
-  background: url("../img/bg.jpg") no-repeat center;
+  background: url("../assets/bg.jpg") no-repeat center;
   background-size: cover;
   margin-top: 92px;
   text-align: center;
@@ -795,7 +891,7 @@ img {
   .introducao {
     margin-top: 0px;
     padding-top: 40px;
-    background: url("../img/bg-mobile.jpg") no-repeat center;
+    background: url("../assets/bg-mobile.jpg") no-repeat center;
     background-size: cover;
   }
 }
@@ -824,7 +920,8 @@ img {
   font-style: italic;
 }
 
-.quote-externo p:before, .quote-externo p:after {
+.quote-externo p:before,
+.quote-externo p:after {
   content: "";
   display: block;
   width: 60px;
@@ -836,7 +933,7 @@ img {
 .quote-externo cite {
   font-style: normal;
   font-weight: bold;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font-size: 14px;
   line-height: 20px;
 }
@@ -889,7 +986,7 @@ img {
 .produtos_lista li h3 {
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   margin-top: 20px;
   font-size: 18px;
   line-height: 25px;
@@ -962,7 +1059,7 @@ img {
   width: 634px;
   height: 83px;
   display: block;
-  background: url("../img/linhas.png") no-repeat center;
+  background: url("../assets/linhas.png") no-repeat center;
   position: absolute;
   top: 209px;
   right: 162px;
@@ -1005,7 +1102,7 @@ img {
 .qualidade_lista li h3 {
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   margin-top: 20px;
   font-size: 18px;
   line-height: 25px;
@@ -1024,7 +1121,7 @@ img {
 .quebra {
   width: 100%;
   height: 220px;
-  background: url("../img/bg-footer.jpg") no-repeat center;
+  background: url("../assets/bg-footer.jpg") no-repeat center;
   background-size: cover;
   text-align: center;
   padding-top: 40px;
@@ -1045,7 +1142,7 @@ img {
 .footer h3 {
   color: #fec63e;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font-weight: bold;
   font-size: 18px;
   line-height: 25px;
@@ -1065,7 +1162,7 @@ img {
 }
 
 .footer_contato ul li {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 14px;
   line-height: 20px;
 }
@@ -1079,7 +1176,7 @@ img {
   border: 3px solid #fec63e;
   display: block;
   padding: 10px;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
@@ -1108,7 +1205,13 @@ img {
 }
 
 /*Animações*/
-.js .introducao h1, .js .introducao blockquote, .js .introducao .btn, .js .animar, .js .animar-interno, .js .introducao-interna h1, .js .introducao-interna p {
+.js .introducao h1,
+.js .introducao blockquote,
+.js .introducao .btn,
+.js .animar,
+.js .animar-interno,
+.js .introducao-interna h1,
+.js .introducao-interna p {
   opacity: 0;
 }
 
@@ -1151,7 +1254,7 @@ img {
 }
 
 .interna_sobre {
-  background: url("../img/bg-sobre.jpg") no-repeat center;
+  background: url("../assets/bg-sobre.jpg") no-repeat center;
   background-size: cover;
 }
 
@@ -1175,7 +1278,7 @@ img {
 }
 
 .missao_sobre ul li {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 18px;
   line-height: 25px;
   line-height: 30px;
@@ -1193,7 +1296,7 @@ img {
 }
 
 .interna_produtos {
-  background: url("../img/bg-produtos.jpg") no-repeat center;
+  background: url("../assets/bg-produtos.jpg") no-repeat center;
   background-size: cover;
 }
 
@@ -1204,7 +1307,7 @@ img {
 .produto_item h2 {
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font-weight: bold;
   position: relative;
   top: -180px;
@@ -1227,7 +1330,8 @@ img {
   }
 }
 
-.produto_item h2:after, .produto_item h2:before {
+.produto_item h2:after,
+.produto_item h2:before {
   content: "";
   display: block;
   width: 60px;
@@ -1317,7 +1421,8 @@ img {
   }
 }
 
-.produto_info ul li:nth-child(1), .produto_info ul li:nth-child(2) {
+.produto_info ul li:nth-child(1),
+.produto_info ul li:nth-child(2) {
   margin-bottom: 2px;
 }
 
@@ -1355,7 +1460,7 @@ img {
   display: block;
   color: #fff;
   margin-bottom: 4px;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 18px;
   line-height: 25px;
 }
@@ -1369,7 +1474,7 @@ img {
   padding: 7px 10px;
   margin-bottom: 10px;
   outline: none;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 14px;
   line-height: 20px;
 }
@@ -1384,7 +1489,7 @@ img {
   padding: 7px 10px;
   margin-bottom: 20px;
   outline: none;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 14px;
   line-height: 20px;
 }
@@ -1408,7 +1513,7 @@ img {
 
 .orcamento_dados span {
   display: block;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 18px;
   line-height: 25px;
   line-height: 30px;
@@ -1430,7 +1535,7 @@ img {
 
 .orcamento_dados ul li {
   padding: 10px 15px;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 14px;
   line-height: 20px;
 }
@@ -1444,7 +1549,7 @@ img {
 }
 
 .interna_portfolio {
-  background: url("../img/bg-portfolio.jpg") no-repeat center;
+  background: url("../assets/bg-portfolio.jpg") no-repeat center;
   background-size: cover;
 }
 
@@ -1458,7 +1563,7 @@ img {
   text-align: center;
   font-style: italic;
   margin-bottom: 20px;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 18px;
   line-height: 25px;
 }
@@ -1472,7 +1577,8 @@ img {
 }
 
 /*Plugin de Slide*/
-.rslides, .rslides_portfolio {
+.rslides,
+.rslides_portfolio {
   position: relative;
   list-style: none;
   overflow: hidden;
@@ -1481,7 +1587,8 @@ img {
   margin: 0;
 }
 
-.rslides li, .rslides_portfolio li {
+.rslides li,
+.rslides_portfolio li {
   -webkit-backface-visibility: hidden;
   position: absolute;
   display: none;
@@ -1490,13 +1597,15 @@ img {
   top: 0;
 }
 
-.rslides li:first-child, .rslides_portfolio li:first-child {
+.rslides li:first-child,
+.rslides_portfolio li:first-child {
   position: relative;
   display: block;
   float: left;
 }
 
-.rslides img, .rslides_portfolio img {
+.rslides img,
+.rslides_portfolio img {
   display: block;
   height: auto;
   width: 100%;
@@ -1524,13 +1633,14 @@ img {
   text-indent: -200px;
 }
 
-.rslides_tabs li a:hover, .rslides_tabs li.rslides_here a {
+.rslides_tabs li a:hover,
+.rslides_tabs li.rslides_here a {
   background: #fec63e;
   color: #fec63e;
 }
 
 .interna_contato {
-  background: url("../img/bg-contato.jpg") no-repeat center;
+  background: url("../assets/bg-contato.jpg") no-repeat center;
   background-size: cover;
 }
 
@@ -1553,7 +1663,7 @@ img {
 .contato_form label {
   display: block;
   margin-bottom: 4px;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 18px;
   line-height: 25px;
 }
@@ -1566,7 +1676,7 @@ img {
   padding: 7px 10px;
   margin-bottom: 10px;
   outline: none;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 14px;
   line-height: 20px;
 }
@@ -1580,7 +1690,7 @@ img {
   padding: 7px 10px;
   margin-bottom: 20px;
   outline: none;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 14px;
   line-height: 20px;
 }
@@ -1604,7 +1714,7 @@ img {
 
 .contato_dados span {
   display: block;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 18px;
   line-height: 25px;
   line-height: 30px;
