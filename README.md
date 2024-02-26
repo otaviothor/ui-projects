@@ -1,4 +1,4 @@
-# Repositório de projetos de html, css e js
+# Repositório de projetos de HTML, CSS e JS
 
 ## 📄 Licença
 
