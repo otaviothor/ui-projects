@@ -48,7 +48,11 @@ const Animal = {
     return exits;
   },
   total() {
-    return Animal.entry() + Animal.exit();
+    let total = 0;
+    Animal.all.forEach((an) => {
+      total += Number(an.valor);
+    });
+    return total;
   },
 };
 
@@ -61,14 +65,18 @@ const DOM = {
     DOM.transactionsContainer.appendChild(tr);
   },
   innerHTMLAnimal(transaction, index) {
-    const servico = Utils.formatCurrency(transaction.servico);
+    const valor = Utils.formatCurrency(transaction.valor);
 
     const html = `
       <td class="raca">${transaction.raca}</td>
       <td class="servico">${transaction.servico}</td>
-      <td class="valor-servico">${servico}</td>
+      <td class="valor-servico">${valor}</td>
       <td>
-        <img onclick="Animal.remove(${index})" src="./assets/minus.svg" alt="Remover animal" title="Remover animal">
+        <img 
+          onclick="Animal.remove(${index})" 
+          src="./assets/${transaction.avaliable ? 'minus' : 'exit'}.svg" 
+          alt="${transaction.avaliable ? 'Remover animal' : 'Animal já foi liberado'}" 
+          title="${transaction.avaliable ? 'Remover animal' : 'Animal já foi liberado'}">
       </td>
     `;
 
@@ -87,20 +95,15 @@ const DOM = {
 };
 
 const Utils = {
-  formatAmount(value) {
-    value = Number(value.replace(/\,\./g, "")) * 100;
-    return value;
-  },
   formatCurrency(value) {
-    const signal = Number(value) < 0 ? "- " : "";
     value = String(value).replace(/\D/g, "");
-    value = Number(value) / 100;
+    value = Number(value);
     value = value.toLocaleString("pt-BR", {
       style: "currency",
       currency: "BRL",
     });
 
-    return signal + value;
+    return value;
   },
 };
 
@@ -123,7 +126,6 @@ const Form = {
   },
   formatValues() {
     let { raca, servico, valor } = Form.getValues();
-    valor = Utils.formatAmount(valor);
     return {
       raca,
       servico,
@@ -152,7 +154,7 @@ const Form = {
 
 const App = {
   init() {
-    Animal.all.forEach((transaction) => DOM.addAnimal(transaction));
+    Animal.all.forEach((transaction, index) => DOM.addAnimal(transaction, index));
     DOM.updateBalance();
     Storage.set(Animal.all);
   },
