@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet4 🐶</title>
+
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>Pet4 🐶</h1>
+    </header>
+
+    <main class="container">
+      <section id="balance">
+        <div class="card">
+          <h3>
+            <span>Entrada de animais</span>
+            <img src="./assets/income.svg" alt="Imagem de entradas" />
+          </h3>
+          <p id="entry">0</p>
+        </div>
+
+        <div class="card">
+          <h3>
+            <span>Saída de animais</span>
+            <img src="./assets/expense.svg" alt="Imagem de saídas" />
+          </h3>
+          <p id="exit">0</p>
+        </div>
+
+        <div class="card total">
+          <h3>
+            <span>Total</span>
+            <img src="./assets/total.svg" alt="Imagem de total" />
+          </h3>
+          <p id="total">R$ 0</p>
+        </div>
+      </section>
+
+      <section id="transaction">
+        <a href="#" class="button new" onclick="Modal.toggle()"
+          >Cadastrar animal</a
+        >
+
+        <div id="container-table">
+          <table id="data-table">
+            <thead>
+              <tr>
+                <th>Raça</th>
+                <th>Serviço</th>
+                <th>Valor do Serviço</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <div id="form">
+          <h2>Cadastrar animal</h2>
+          <form onsubmit="Form.submit(event)">
+            <div class="input-group">
+              <input type="text" id="raca" name="raca" placeholder="Raça" />
+            </div>
+            <div class="input-group">
+              <input
+                type="text"
+                id="servico"
+                name="servico"
+                placeholder="Serviço"
+              />
+            </div>
+            <div class="input-group">
+              <input
+                type="number"
+                id="valor"
+                name="valor"
+                placeholder="Valor do serviço"
+                step="0.01"
+              />
+            </div>
+            <div class="input-group actions">
+              <a href="#" class="button cancel" onclick="Modal.toggle()"
+                >Cancelar</a
+              >
+              <button type="submit">Cadastrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Pet4 🐶</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
