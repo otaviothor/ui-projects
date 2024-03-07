@@ -74,9 +74,13 @@ const DOM = {
       <td>
         <img 
           onclick="Animal.remove(${index})" 
-          src="./assets/${transaction.avaliable ? 'minus' : 'exit'}.svg" 
-          alt="${transaction.avaliable ? 'Remover animal' : 'Animal já foi liberado'}" 
-          title="${transaction.avaliable ? 'Remover animal' : 'Animal já foi liberado'}">
+          src="./assets/${transaction.avaliable ? "minus" : "exit"}.svg" 
+          alt="${
+            transaction.avaliable ? "Remover animal" : "Animal já foi liberado"
+          }" 
+          title="${
+            transaction.avaliable ? "Remover animal" : "Animal já foi liberado"
+          }">
       </td>
     `;
 
@@ -96,7 +100,7 @@ const DOM = {
 
 const Utils = {
   formatCurrency(value) {
-    value = String(value).replace(/\D/g, "");
+    value = String(value);
     value = Number(value);
     value = value.toLocaleString("pt-BR", {
       style: "currency",
@@ -126,6 +130,7 @@ const Form = {
   },
   formatValues() {
     let { raca, servico, valor } = Form.getValues();
+    valor = valor.replaceAll(".", "").replace(",", ".");
     return {
       raca,
       servico,
@@ -154,7 +159,9 @@ const Form = {
 
 const App = {
   init() {
-    Animal.all.forEach((transaction, index) => DOM.addAnimal(transaction, index));
+    Animal.all.forEach((transaction, index) =>
+      DOM.addAnimal(transaction, index)
+    );
     DOM.updateBalance();
     Storage.set(Animal.all);
   },
