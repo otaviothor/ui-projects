@@ -68,9 +68,11 @@ const DOM = {
     const valor = Utils.formatCurrency(transaction.valor);
 
     const html = `
-      <td class="raca">${transaction.raca}</td>
-      <td class="servico">${transaction.servico}</td>
-      <td class="valor-servico">${valor}</td>
+      <td class="raca" title="${transaction.raca}">${transaction.raca}</td>
+      <td class="servico" title="${transaction.servico}">${
+      transaction.servico
+    }</td>
+      <td class="valor-servico" title="${valor}">${valor}</td>
       <td>
         <img 
           onclick="Animal.remove(${index})" 
@@ -92,6 +94,9 @@ const DOM = {
     document.getElementById("total").innerHTML = Utils.formatCurrency(
       Animal.total()
     );
+    document
+      .getElementById("total")
+      .setAttribute("title", Utils.formatCurrency(Animal.total()));
   },
   clearAnimals() {
     DOM.transactionsContainer.innerHTML = "";

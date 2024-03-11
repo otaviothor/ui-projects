@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <p>
+        <a href="./simple_form.html">form simples</a>
+      </p>
+      <h2>Entre em contato</h2>
+      <p>
+        Por favor, preenchá o formulário abaixo para entrar em contato conosco.
+      </p>
+
+      <form action="processar_formulario.php" method="post" id="form_contato">
+        <fieldset>
+          <legend>Informações pessoais</legend>
+          <p>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required />
+          </p>
+          <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </p>
+          <p>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" />
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Selecione o tópico</legend>
+          <p>
+            <label for="assunto">Assunto:</label>
+            <select name="assunto" id="assunto">
+              <option value="matricula">Matrícula</option>
+              <option value="blackboard">Blackboard</option>
+              <option value="portal">Portal do aluno</option>
+              <option value="outros">Outros</option>
+            </select>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Deixe sua mensagem</legend>
+          <p>
+            <label for="mensagem">Mensagem:</label>
+            <textarea
+              name="mensagem"
+              id="mensagem"
+              cols="50"
+              rows="4"
+              required
+            ></textarea>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferência de contato</legend>
+          <p>
+            <input
+              type="radio"
+              id="contato_email"
+              name="preferencia_contato"
+              value="email"
+              checked
+            />
+            <label for="contato_email">Email</label>
+          </p>
+          <p>
+            <input
+              type="radio"
+              id="contato_telefone"
+              name="preferencia_contato"
+              value="telefone"
+            />
+            <label for="contato_telefone">Telefone</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Campus de preferência</legend>
+          <p>
+            <label for="onde_encontrou">Escolha o campus:</label>
+            <input
+              type="text"
+              name="onde_encontrou"
+              id="onde_encontrou"
+              list="campus"
+            />
+            <datalist id="campus">
+              <option value="Anália Franco" />
+              <option value="Guarulhos" />
+              <option value="Liberdade" />
+              <option value="Paulista" />
+              <option value="Santo Amaro" />
+              <option value="São Miguel" />
+              <option value="Villa-Lobos" />
+            </datalist>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Opções adicionais</legend>
+          <p>
+            <input
+              type="checkbox"
+              name="newsletter"
+              id="newsletter"
+              value="newsletter"
+            />
+            <label for="newsletter">Eu aceito receber newsletters</label>
+          </p>
+          <p>
+            <input
+              type="checkbox"
+              name="promocoes"
+              id="promocoes"
+              value="promocoes"
+            />
+            <label for="promocoes">Eu aceito receber promoções por email</label>
+          </p>
+          <p>
+            <input
+              type="checkbox"
+              name="novidade"
+              id="novidade"
+              value="novidade"
+            />
+            <label for="novidade"
+              >Eu aceito receber novidades sobre eventos e cursos</label
+            >
+          </p>
+          <p>
+            <input
+              type="checkbox"
+              name="termos"
+              id="termos"
+              value="termos"
+              required
+              checked
+            />
+            <label for="termos">Eu aceito os termos e condições</label>
+          </p>
+        </fieldset>
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+  </body>
+
+  <script>
+    document.getElementById("form_contato").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const form = document.getElementById("form_contato");
+      const formData = new FormData(form);
+      let formDataObject = {};
+      for (const [key, value] of formData.entries()) {
+        formDataObject[key] = value;
+      }
+      console.log(formDataObject);
+      alert(JSON.stringify(formDataObject));
+    });
+  </script>
+</html>
